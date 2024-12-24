@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matija Jambresic</title>
+    <link rel="icon" type="image/png" href="./assets/icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple_touch_icon.png">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script type=module src="scripts/application.js"></script>
+</head>
+
+<body>
+    <!-- HELLO -->
+    <section id="hello" class="hello_section">
+        <div class="intro_text_div">
+            <p>Hello!</p>
+        </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="intro_section">
+        <div class="intro_text_div" id="introText">
+            <p>
+                I'm 
+                <span class="highlighted_text">Matija Jambresic</span>,
+                a professional gameplay and networking engineer who loves to design and develop video games. 
+            </p>
+        </div>
+        <div id="introImageContainer" class="intro_image_div">
+            <img class="intro_image" src="./assets/profile_icon.png" alt="profile_icon">
+        </div>
+    </section>
+
+    <!-- SEND MESSAGE -->
+    <section class="intro_section" style="padding-top: var(--dynamic-intro-padding)">
+        <div class="intro_contact_text_div">
+            <p class="intro_contact_send_message_div">
+                Send me a message at
+                <a href="mailto:matija.jambresic@yahoo.com" class="hyperlink hyperlink_with_image">
+                    <span class="intro_contact_email">matija.jambresic<span class="small_at">@</span>yahoo.com</span>
+                    <span class="intro_contact_email_short">Email</span>
+                    <img src="./assets/exl.png" class="hyperlink_image">
+                </a>
+            </p>
+            <div class="intro_contact_contacts_div">
+                <p>
+                    <a href="#footer" class="hyperlink_site_navigation hyperlink_with_image">
+                        <span class="intro_skip_to_contacts">Skip to contacts</span>
+                        <span class="intro_skip_to_contacts_short">Contacts</span>
+                        <img src="./assets/adn.png" class="hyperlink_image">
+                    </a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ARROWS -->
+    <section class="intro_arrows_section">
+        <div style="padding-top: 91px">
+            <img class="intro_arrow" src="./assets/adn.webp">
+        </div>
+    </section>
+
+    <!-- MODAL -->
+    <div id="projectModal" class="modal">
+        <div class="modal_content">
+            <div class="modal_title_image_div">
+                <img id="modalTitleImage" class="modal_title_image lazyload" src="./assets/klps.webp" data-src="./assets/klp.webp" alt="Image not loaded.">
+                <span id="closeButton" class="modal_close_button">&times;</span>
+            </div>
+            <div id="modalProjectImagesDiv" class="modal_project_images_grid">
+            </div>
+            <div class="modal_empty_space"></div>
+            <div id="modalLinksDiv" class="project_box_div">
+                <p id="modalLinks">
+                </p>
+            </div>
+            <div class="modal_text_div">
+                <p id="modalTitle" class="modal_title">Kick League</p>
+            </div>
+            <div id="modalText" class="modal_text_div">
+            </div>
+            <div id="modalResponsibilitiesDiv" class="modal_text_div">
+            </div>
+            <div class="modal_foot_content">
+                <div id="modalToolsDiv" class="project_box_div">
+                    <p class="modal_subtitle">Tools</p>
+                    <p id="modalTools">
+                    </p>
+                </div>
+                <div id = "modalDevTimeDiv" class="project_box_div modal_dev_time">
+                    <p class="modal_subtitle">Development Time</p>
+                    <p id="modalDevTime" class="project_development_time_text">1 year</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTENT -->
+    <section class="content_section" id="content">
+        
+    </section>
+
+    <section id="footer" class="footer">
+        <div class="footer_contacts_div">
+            <p class="footer_contacts_p">
+                <a href="mailto:matija.jambresic@yahoo.com" target="_blank" rel="noopener noreferrer" class="hyperlink">Email</a>
+                <a href="https://github.com/matyX6" target="_blank" rel="noopener noreferrer" class="hyperlink">GitHub</a>
+                <a href="https://www.linkedin.com/in/matijajambresic/" target="_blank" rel="noopener noreferrer" class="hyperlink">LinkedIn</a>
+                <a href="./assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="hyperlink">Resume</a>
+            </p>
+            <p class="footer_back_to_top">
+                <a href="#" class="hyperlink_site_navigation hyperlink_with_image">
+                    <span class="intro_skip_to_contacts">Back to top</span>
+                    <span class="intro_skip_to_contacts_short">Top</span>
+                    <img src="./assets/aup.png" class="hyperlink_image">
+                </a>
+            </p>
+        </div>
+        <div class="footer_copyright_container">
+            <p>
+                Developed by © 2024 Matija Jambresic. All rights reserved. Kick League, Homebound, Bunners, White Blocks, and Timecode fall under the same copyright stated at start. All other trademarks and trade names are the property of their respective owners. The content on this website is licensed under the terms stated in the 
+                <a href="https://github.com/matyX6/matyX6.github.io/blob/main/LICENSE.md" target="_blank" rel="noopener noreferrer" class="hyperlink_simple_disclaimer">License  <img src="./assets/sexld.png" class="hyperlink_simple_image"></a>.
+            </p>
+        </div>
+    </section>
+</body>
+</html>

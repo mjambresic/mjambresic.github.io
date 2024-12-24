@@ -1,0 +1,189 @@
+@media screen and (max-width: 370px)
+{
+    .intro_contact_email
+    {
+        display: none;
+    }
+    .intro_contact_email_short
+    {
+        display: inline;
+    }
+}
+
+@media screen and (min-width: 370px)
+{
+    .intro_contact_email
+    {
+        display: inline;
+    }
+    .intro_contact_email_short
+    {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 539px)
+{
+    .intro_skip_to_contacts
+    {
+        display: none;
+    }
+
+    .intro_skip_to_contacts_short
+    {
+        display: inline;
+    }
+    
+    .intro_image_div
+    {
+        text-align: end;
+    }
+
+    .intro_contact_contacts_div 
+    {
+        justify-content: end;
+    }
+}
+
+@media screen and (min-width: 539px)
+{
+    .intro_skip_to_contacts
+    {
+        display: inline;
+    }
+    
+    .intro_skip_to_contacts_short
+    {
+        display: none;
+    }
+    
+    .intro_image_div, .intro_contact_contacts_div
+    {
+        text-align: center;
+    }
+
+    .intro_contact_contacts_div
+    {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 768px)
+{
+    .intro_image
+    {
+        height: var(--intro-image-height);
+        max-height: 96px;
+        padding: 10px;
+    }
+}
+
+@media screen and (min-width: 768px)
+{
+    .intro_image
+    {
+        padding: 0px;
+        height: var(--intro-image-height);
+    }
+}
+
+:root
+{
+    --intro-opacity: 0;
+    --enable-intro-interaction: auto;
+    --dynamic-intro-padding: min(500px, max(0px, calc(130 * (100vh / 900))));; /* scales padding with the reference of 900px, values clamped from 0 to 500 not to scale infinitely */
+    --intro-image-height: 256px;
+    --intro-image-container-width: 256px;
+}
+
+.hello_section
+{
+    display: flex;
+    max-width: var(--main-content-max-width);
+    width: 100%;
+    align-items: center;
+    padding-top: var(--dynamic-intro-padding);
+    padding-bottom: var(--dynamic-intro-padding);;
+    opacity: var(--intro-opacity);
+    pointer-events: var(--enable-intro-interaction);
+    #background: #171717;
+}
+
+.intro_section
+{
+    display: flex;
+    flex-direction: row;
+    max-width: var(--main-content-max-width);
+    width: 100%;
+    align-items: start;
+    opacity: var(--intro-opacity);
+    pointer-events: var(--enable-intro-interaction);
+    #background: #202020;
+}
+
+.intro_text_div
+{
+    font-size: clamp(16px, 3vw, 32px);
+    #background: gray;
+}
+
+.intro_contact_text_div
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.intro_contact_send_message_div 
+{
+}
+
+.intro_contact_email, .intro_contact_email_short
+{
+    /* Used in media screen style */
+}
+
+.intro_skip_to_contacts, .intro_skip_to_contacts_short
+{
+    
+}
+
+.intro_contact_contacts_div
+{
+    display: flex;
+    width: var(--intro-image-container-width);
+    align-items: flex-end;
+    #background: gray;
+}
+
+.intro_arrows_section
+{
+    max-width: var(--main-content-max-width);
+    text-align: center;
+    width: 100%;
+    height: 0px;
+    opacity: var(--intro-opacity);
+    pointer-events: var(--enable-intro-interaction);
+    #background: #232323;
+}
+
+.intro_arrow
+{
+    background-size: contain;
+    height: 44px;
+    width: 44px;
+    #background: gray;
+}
+
+.intro_image_div
+{
+    width: 100%;
+    height: 100%;
+    #background: gray;
+}
+
+.intro_image
+{
+    /*Used in media screen style*/
+}

@@ -1,0 +1,115 @@
+@media (hover: hover)
+{
+    .hyperlink:hover::before
+    {
+        border-color: orangered;
+    }
+
+    .hyperlink_site_navigation:hover::before
+    {
+        border-color: var(--light-color);
+    }
+
+    .hyperlink_site_navigation:hover
+    {
+        opacity: 50%;
+    }
+
+    .hyperlink_simple:hover
+    {
+        border-bottom: 1px solid dimgray;
+    }
+
+    .hyperlink_simple_disclaimer:hover
+    {
+        border-bottom: 1px solid white;
+    }
+}
+
+:root
+{
+    --outline-offset-top: -2px;
+    --outline-offset-bottom: -3px;
+    --outline-offset-horizontal: -4px;
+}
+
+.hyperlink 
+{
+    position: relative;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: bold;
+    color: orangered;
+}
+
+.hyperlink::before
+{
+    content: '';
+    position: absolute;
+    top: var(--outline-offset-top);
+    left: var(--outline-offset-horizontal);
+    right: var(--outline-offset-horizontal);
+    bottom: var(--outline-offset-bottom);
+    border: 1px solid transparent;
+    pointer-events: none;
+}
+
+.hyperlink_image
+{
+    width: 13px;
+    height: 16px;
+}
+
+.hyperlink_with_image
+{
+    word-spacing: -2px;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.hyperlink_site_navigation 
+{
+    position: relative;
+    color: var(--light-color);
+    text-decoration: none;
+    font-weight: bold;
+    opacity: 15%;
+}
+
+.hyperlink_site_navigation::before
+{
+    content: '';
+    position: absolute;
+    top: var(--outline-offset-top);
+    left: var(--outline-offset-horizontal);
+    right: var(--outline-offset-horizontal);
+    bottom: var(--outline-offset-bottom);
+    border: 1px solid var(--light-color);
+    pointer-events: none;
+}
+
+.hyperlink_simple
+{
+    word-spacing: -2px;
+    font-size: small;
+    padding-top: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    text-decoration: none;
+    white-space: nowrap;
+    color: dimgray;
+}
+
+.hyperlink_simple_image
+{
+    width: 9px;
+    height: 12px;
+}
+
+.hyperlink_simple_disclaimer
+{
+    word-spacing: -2px;
+    text-decoration: none;
+    white-space: nowrap;
+    color: white;
+}

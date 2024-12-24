@@ -1,0 +1,117 @@
+@media screen and (max-width: 768px)
+{
+    p
+    {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    ul
+    {
+        padding-left: 40px;
+        padding-right: 10px;
+    }
+}
+
+@media screen and (min-width: 768px)
+{
+    p
+    {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    ul
+    {
+        padding-left: 50px;
+        padding-right: 20px;
+    }
+}
+
+:root 
+{
+    --light-color: #f0f6fc;
+    --placeholder-color: #cfd9e3;
+    --image-asset-aspect-ratio: 640/360;
+    --body-opacity: 0;
+    --enable-content-interaction: auto;
+    --content-opacity: 0;
+    --main-content-max-width: 1000px;
+    --scroll-behavior: smooth;
+}
+
+html 
+{
+    scroll-behavior: var(--scroll-behavior);
+    -webkit-text-size-adjust: 100%; /* Prevents font scaling in mobile browser landscape*/
+}
+
+body 
+{
+    background: black url("../assets/bg.webp");
+    color: var(--light-color);
+    font-size: medium;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    opacity: var(--body-opacity);
+    transition: opacity 0.75s ease-in-out;
+}
+
+p
+{
+    margin: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.highlighted_text
+{
+    text-decoration: none;
+    font-weight: bold;
+    color: orangered;
+}
+
+.bold_text
+{
+    font-weight: bold;
+}
+
+.content_section
+{
+    max-width: var(--main-content-max-width);
+    opacity: var(--content-opacity);
+    pointer-events: var(--enable-content-interaction);
+}
+
+.content_description_section
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 200px;
+    max-width: var(--main-content-max-width);
+    width: 100%;
+    #background: #171717;
+}
+
+.content_description_title_div
+{
+    width: 100%;
+    #background: #171717;
+}
+
+.content_description_text_div
+{
+    max-width: var(--main-content-max-width);
+    text-align: left;
+    width: 100%;
+    #background: gray;
+}
+
+.small_at 
+{
+    font-size: 14px;
+}

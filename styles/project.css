@@ -1,0 +1,123 @@
+@media screen and (max-width: 539px)
+{
+    .project_grid_section
+    {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 20px 10px;
+    }
+}
+
+@media screen and (min-width: 539px) and (max-width: 768px)
+{
+    .project_grid_section
+    {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px 10px;;
+    }
+}
+
+@media screen and (min-width: 768px)
+{
+    .project_grid_section
+    {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 20px;
+    }
+}
+
+@media (hover: hover) 
+{
+    .project_section:hover
+    {
+        transform: translateY(-10px);
+    }
+}
+
+.project_grid_section 
+{
+    width: 100%;
+    display: grid;
+    box-sizing: border-box;
+    grid-gap: 20px;
+    margin-top: 8px;
+    #background: purple;
+}
+
+.project_section 
+{
+    width: 100%;
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    box-sizing: border-box;
+    background: var(--light-color);
+    transition: transform 0.125s ease-in-out;
+}
+
+.project_title_text
+{
+    font-size: medium;
+    text-align: start;
+    text-decoration: none;
+    font-weight: bold;
+    padding-top: 15px;
+    color: black;
+}
+
+.project_image_div
+{
+    width: 100%;
+    #background: gray;
+}
+
+.project_image
+{
+    box-sizing: border-box;
+    width: 100%;
+    aspect-ratio: var(--image-asset-aspect-ratio);
+    background-color: var(--placeholder-color);
+    cursor: pointer;
+    border: solid rgba(255, 255, 255, 0.15) 1px;
+}
+
+.project_text_div
+{
+    width: 100%;
+    flex: 1;
+    font-size: small;
+    color: black;
+    #background: gray;
+}
+
+.project_development_time_text
+{
+    font-size: small;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    color: dimgray;
+}
+
+.project_box_div
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    color: black;
+    padding: 0px;
+    margin-bottom: 12px;
+    #background: gray;
+}
+
+.project_box_tool
+{
+    display: inline-block;
+    text-decoration: none;
+    font-size: small;
+    font-weight: bold;
+    background-color: black;
+    color: var(--light-color);
+    padding: 3px 5px 3px 5px;
+    margin-bottom: 5px;
+}

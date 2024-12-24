@@ -1,0 +1,38 @@
+.footer 
+{
+    margin-top: 230px;
+    padding-bottom: 64px;
+    max-width: var(--main-content-max-width);
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+}
+
+.footer_contacts_div
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.footer_contacts_p
+{
+    padding-right: 0px;
+    word-spacing: 10px;
+}
+
+.footer_back_to_top
+{
+    padding-left: 0px;
+    transform: translateY(-5px);
+}
+
+.footer_copyright_container
+{
+    color: var(--light-color);
+    width: 100%;
+    opacity: 40%;
+    font-size: small;
+    text-align: justify;
+}
