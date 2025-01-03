@@ -24,16 +24,6 @@
 
 @media screen and (max-width: 539px)
 {
-    .intro_skip_to_contacts
-    {
-        display: none;
-    }
-
-    .intro_skip_to_contacts_short
-    {
-        display: inline;
-    }
-    
     .intro_image_div
     {
         text-align: end;
@@ -47,16 +37,6 @@
 
 @media screen and (min-width: 539px)
 {
-    .intro_skip_to_contacts
-    {
-        display: inline;
-    }
-    
-    .intro_skip_to_contacts_short
-    {
-        display: none;
-    }
-    
     .intro_image_div, .intro_contact_contacts_div
     {
         text-align: center;
@@ -135,18 +115,9 @@
     justify-content: space-between;
 }
 
-.intro_contact_send_message_div 
-{
-}
-
 .intro_contact_email, .intro_contact_email_short
 {
     /* Used in media screen style */
-}
-
-.intro_skip_to_contacts, .intro_skip_to_contacts_short
-{
-    
 }
 
 .intro_contact_contacts_div
@@ -154,6 +125,7 @@
     display: flex;
     width: var(--intro-image-container-width);
     align-items: flex-end;
+    transform: translateY(-5px);
     #background: gray;
 }
 

@@ -25,7 +25,7 @@
 .footer_back_to_top
 {
     padding-left: 0px;
-    transform: translateY(-5px);
+    transform: translate(-5px, -4px);
 }
 
 .footer_copyright_container

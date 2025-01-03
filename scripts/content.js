@@ -62,10 +62,17 @@ export class Content
     
     CreateProjectSection(projectData, projectDataArrayId, projectDataArrayIndex)
     {
+        let firstImageSrc = projectData.GetFirstImageSrc();
+        let firstImageDataSrc = projectData.GetFirstImageDataSrc();
+        let backgroundImageObjectPosition = projectData.GetBackgroundImageObjectPosition();
+        
         return `            
         <section class="project_section" project-data-array-id="${projectDataArrayId}" project-data-array-index="${projectDataArrayIndex}">
             <div class="project_image_div">
-                <img class="project_image lazyload" src="${projectData.GetFirstImageSrc()}" data-src="${projectData.GetFirstImageDataSrc()}">
+                <div class="project_image_div_container">
+                    <img class="project_image lazyload" src="${firstImageSrc}" data-src="${firstImageDataSrc}">
+                    <img class="project_image_background lazyload" src="${firstImageSrc}" data-src="${firstImageDataSrc}" style="object-position: ${backgroundImageObjectPosition}">
+                </div>
             </div>
             <div class="project_text_div">
                 <p class="project_title_text">${projectData.title}</p><br>

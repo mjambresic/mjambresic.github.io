@@ -1,3 +1,29 @@
+@media screen and (max-width: 539px)
+{
+    .hyperlink_site_navigation_text
+    {
+        display: none;
+    }
+
+    .hyperlink_site_navigation_text_short
+    {
+        display: inline;
+    }
+}
+
+@media screen and (min-width: 539px)
+{
+    .hyperlink_site_navigation_text
+    {
+        display: inline;
+    }
+
+    .hyperlink_site_navigation_text_short
+    {
+        display: none;
+    }
+}
+
 @media (hover: hover)
 {
     .hyperlink:hover::before
@@ -86,6 +112,11 @@
     bottom: var(--outline-offset-bottom);
     border: 1px solid var(--light-color);
     pointer-events: none;
+}
+
+.hyperlink_site_navigation_text, .hyperlink_site_navigation_text_short
+{
+    /* Used in media screen style */
 }
 
 .hyperlink_simple

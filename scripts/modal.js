@@ -31,9 +31,10 @@ const PROJECT_IMAGE_SELECTED_CLASS_NAME = 'modal_project_image_selected';
 const PROJECT_IMAGE_SELECTED_ARROW_CLASS_NAME = 'modal_project_image_div_selected_arrow';
 const ARROW_IMAGE_DATA_PATH = './assets/arr.png';
 const RESPONSIBILITY_IDENT_SPECIAL_CHARACTER = '*';
+const RESPONSIBILITY_NEW_LINE_SPECIAL_CHARACTER = '#';
+const RESPONSIBILITY_SPECIAL_CHARACTER_SUBSTRING = 1;
 const AUTO_SELECT_DOUBLE_TIME_MULTIPLIER = 2;
 const DONT_EXTEND_AUTO_SELECT_DURATION_THRESHOLD_MS = 8000;
-const RESPONSIBILITY_IDENT_SUBSTRING = 1;
 const SCROLL_START_VALUE = 0;
 const EMPTY_ARRAY_LENGTH = 0;
 const FIRST_INDEX = 0;
@@ -47,6 +48,9 @@ export class Modal
     modal = null;
     title = null;
     titleImage = null;
+    titleImageBackground = null;
+    noteContainer = null;
+    noteText = null;
     modalProjectImagesContainer = null;
     text = null;
     responsibilitiesContainer = null;
@@ -71,6 +75,9 @@ export class Modal
         this.modal = document.getElementById('projectModal');
         this.title = document.getElementById('modalTitle');
         this.titleImage = document.getElementById('modalTitleImage');
+        this.titleImageBackground = document.getElementById('modalTitleImageBackground');
+        this.noteContainer = document.getElementById('modalNote');
+        this.noteText = document.getElementById('modalNoteText');
         this.modalProjectImagesContainer = document.getElementById('modalProjectImagesDiv');
         this.text = document.getElementById('modalText');
         this.responsibilitiesContainer = document.getElementById('modalResponsibilitiesDiv');
@@ -110,12 +117,32 @@ export class Modal
     {
         let projectData = this.currentProjectData;
         this.title.textContent = projectData.title;
-        this.SetupAndGenerateProjectImages(projectData);
+        this.SetupNote();
+        this.SetupAndGenerateProjectImages();
         this.text.innerHTML = `${projectData.descriptions.map(desc => `<p>${desc}</p><br>`).join(EMPTY_STRING)}`;
-        this.responsibilitiesContainer.innerHTML = this.GenerateResponsibilitiesText(projectData);
+        this.responsibilitiesContainer.innerHTML = this.GenerateResponsibilitiesText();
         this.developmentTime.textContent = projectData.developmentTime;
         this.links.innerHTML = `${projectData.links.map(link => `<a href="${link.url}" target="_blank" rel="noopener noreferrer" class="hyperlink_simple">${link.text} <img src="./assets/sexl.png" class="hyperlink_simple_image"></a>`).join(EMPTY_SPACE)}`;
         this.tools.innerHTML = `${projectData.tools.map(tool => `<span class="project_box_tool" style="background-color: ${tool.backgroundColor};">${tool.name}</span>`).join(EMPTY_SPACE)}`;
+    }
+    
+    SetupNote()
+    {
+        let noteData = this.currentProjectData.note;
+        if (noteData == null) // note data doesn't exist, null or defined data are both expected results here
+        {
+            // resolves note visibility here instead of ResolveDataVisibility, to prevent code duplication
+            this.noteContainer.style.display = DISPLAY_NONE;
+            return;
+        }
+
+        this.noteContainer.style.display = DISPLAY_BLOCK;
+        this.noteText.innerHTML = noteData.text;
+        if (noteData.colorOverride !== null)
+        {
+            this.noteContainer.style.color = noteData.colorOverride;
+            this.noteContainer.style.backgroundColor = noteData.backgroundColorOverride;
+        }
     }
 
     SetupAndGenerateProjectImages() 
@@ -169,16 +196,21 @@ export class Modal
         projectImage.SetModalTitleImage(false);
     }
     
-    SetTitleImage(imageSrc, imageDataSrc)
+    SetTitleImage(imageSrc, imageDataSrc, backgroundImageObjectPosition)
     {
         this.titleImage.className = MODAL_TITLE_IMAGE_CLASS_NAME;
         this.titleImage.src = EMPTY_STRING; // resets image in order to not show the old one before new starts loading
         this.titleImage.src = imageSrc;
+        this.titleImageBackground.style.objectPosition = backgroundImageObjectPosition; // override background object position
+        this.titleImageBackground.src = EMPTY_STRING; // same reset comment applies as above  
+        this.titleImageBackground.src = imageSrc;
 
         if (imageDataSrc !== EMPTY_STRING)
         {
             this.titleImage.classList.add(LAZY_LOADING_CLASS); // resets lazy loading with the combination of class name override above
+            this.titleImageBackground.classList.add(LAZY_LOADING_CLASS);
             this.titleImage.setAttribute(DATA_SRC_ATTRIBUTE, imageDataSrc);
+            this.titleImageBackground.setAttribute(DATA_SRC_ATTRIBUTE, imageDataSrc);
         }
     }
 
@@ -255,14 +287,24 @@ export class Modal
         <ul class="modal_responsibility_list">
             ${this.currentProjectData.responsibilities.map(responsibility =>
             {
-                if (responsibility.startsWith(RESPONSIBILITY_IDENT_SPECIAL_CHARACTER))
+                let responsibilityText = EMPTY_STRING;
+                
+                if (responsibility.startsWith(RESPONSIBILITY_NEW_LINE_SPECIAL_CHARACTER)) // new line resolve
                 {
-                    return `<ul><li>${responsibility.substring(RESPONSIBILITY_IDENT_SUBSTRING).trim()}</li></ul>`;
+                    responsibilityText += `<br>`;
+                    responsibility = responsibility.substring(RESPONSIBILITY_SPECIAL_CHARACTER_SUBSTRING).trim();
+                }
+                
+                if (responsibility.startsWith(RESPONSIBILITY_IDENT_SPECIAL_CHARACTER)) // Ident level and responsibility resolve
+                {
+                    responsibilityText += `<ul><li>${responsibility.substring(RESPONSIBILITY_SPECIAL_CHARACTER_SUBSTRING).trim()}</li></ul>`;
                 } 
                 else
                 {
-                    return `<li>${responsibility}</li>`;
+                    responsibilityText += `<li>${responsibility}</li>`;
                 }
+
+                return responsibilityText;
             }).join(EMPTY_STRING)}
         </ul>`;
     }

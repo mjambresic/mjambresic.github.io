@@ -36,7 +36,7 @@
     <!-- SEND MESSAGE -->
     <section class="intro_section" style="padding-top: var(--dynamic-intro-padding)">
         <div class="intro_contact_text_div">
-            <p class="intro_contact_send_message_div">
+            <p>
                 Send me a message at
                 <a href="mailto:matija.jambresic@yahoo.com" class="hyperlink hyperlink_with_image">
                     <span class="intro_contact_email">matija.jambresic<span class="small_at">@</span>yahoo.com</span>
@@ -47,8 +47,8 @@
             <div class="intro_contact_contacts_div">
                 <p>
                     <a href="#footer" class="hyperlink_site_navigation hyperlink_with_image">
-                        <span class="intro_skip_to_contacts">Skip to contacts</span>
-                        <span class="intro_skip_to_contacts_short">Contacts</span>
+                        <span class="hyperlink_site_navigation_text">Skip to contacts</span>
+                        <span class="hyperlink_site_navigation_text_short">Contacts</span>
                         <img src="./assets/adn.png" class="hyperlink_image">
                     </a>
                 </p>
@@ -67,20 +67,27 @@
     <div id="projectModal" class="modal">
         <div class="modal_content">
             <div class="modal_title_image_div">
-                <img id="modalTitleImage" class="modal_title_image lazyload" src="./assets/klps.webp" data-src="./assets/klp.webp" alt="Image not loaded.">
+                <div class="modal_title_image_div_container">
+                    <img id="modalTitleImage" class="modal_title_image lazyload" src="./assets/klps.webp" data-src="./assets/klp.webp" alt="Image not loaded.">
+                    <img id="modalTitleImageBackground" class="modal_title_image_background lazyload" src="./assets/klps.webp">
+                </div>
                 <span id="closeButton" class="modal_close_button">&times;</span>
             </div>
             <div id="modalProjectImagesDiv" class="modal_project_images_grid">
             </div>
-            <div class="modal_empty_space"></div>
-            <div id="modalLinksDiv" class="project_box_div">
-                <p id="modalLinks">
-                </p>
+            <div id="modalNote" class="modal_note_div">
+                <strong>Note: </strong>
+                <span id="modalNoteText">This is additional context or information.</span>
             </div>
+            <div class="modal_empty_space"></div>
             <div class="modal_text_div">
                 <p id="modalTitle" class="modal_title">Kick League</p>
             </div>
             <div id="modalText" class="modal_text_div">
+            </div>
+            <div id="modalLinksDiv" class="project_box_div">
+                <p id="modalLinks">
+                </p>
             </div>
             <div id="modalResponsibilitiesDiv" class="modal_text_div">
             </div>
@@ -113,8 +120,8 @@
             </p>
             <p class="footer_back_to_top">
                 <a href="#" class="hyperlink_site_navigation hyperlink_with_image">
-                    <span class="intro_skip_to_contacts">Back to top</span>
-                    <span class="intro_skip_to_contacts_short">Top</span>
+                    <span class="hyperlink_site_navigation_text">Back to top</span>
+                    <span class="hyperlink_site_navigation_text_short">Top</span>
                     <img src="./assets/aup.png" class="hyperlink_image">
                 </a>
             </p>

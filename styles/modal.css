@@ -9,7 +9,6 @@
 
 :root 
 {
-    --modal-border-thickness: 2px;
     --modal-absulute-offset: 3px;
 }
 
@@ -25,6 +24,7 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.85);
     overflow-y: auto;
+    z-index: 10;
 }
 
 .modal_content 
@@ -41,7 +41,7 @@
     position: relative;
 }
 
-.modal_project_images_grid 
+.modal_project_images_grid
 {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -55,6 +55,7 @@
 .modal_project_image_div
 {
     position: relative;
+    margin-bottom: 3px;
 }
 
 .modal_project_image
@@ -80,6 +81,7 @@
     transform: translateX(-50%);
     width: 24px;
     height: 12px;
+    z-index: 3;
 }
 
 .modal_foot_content
@@ -104,27 +106,53 @@
     box-sizing: border-box;
 }
 
-.modal_title_image 
+.modal_title_image_div_container 
 {
+    position: relative;
+    display: flex;
+    justify-content: center;
     width: 100%;
     aspect-ratio: var(--image-asset-aspect-ratio);
     background-color: var(--placeholder-color);
     box-sizing: border-box;
     vertical-align: bottom;
-    border: var(--modal-border-thickness) solid black;
+    overflow: hidden;
+}
+
+.modal_title_image_background 
+{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    filter: blur(10px);
+    scale: 1.25;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.modal_title_image 
+{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: relative;
+    z-index: 1;
 }
 
 .modal_empty_space
 {
-    height: 15px;
+    height: 12px;
 }
 
 .modal_title 
 {
     font-weight: bold;
     font-size: medium;
-    color: black;
-    background-color: var(--light-color);
     text-align: left;
 }
 
@@ -139,8 +167,7 @@
     color: black;
     background-color: var(--light-color);
     padding: 3px 8px 6px 11px;
-    border-bottom: var(--modal-border-thickness) solid black;
-    border-left: var(--modal-border-thickness) solid black;
+    z-index: 2;
 }
 
 .modal_text_div
@@ -166,3 +193,10 @@
     padding-left: 24px;
 }
 
+.modal_note_div
+{
+    padding: 20px 12px 20px 12px;
+    margin: 0px 3px 3px 3px;
+    border-left: 5px solid;
+    font-size: small;
+}
