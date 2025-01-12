@@ -1,27 +1,3 @@
-@media screen and (max-width: 370px)
-{
-    .intro_contact_email
-    {
-        display: none;
-    }
-    .intro_contact_email_short
-    {
-        display: inline;
-    }
-}
-
-@media screen and (min-width: 370px)
-{
-    .intro_contact_email
-    {
-        display: inline;
-    }
-    .intro_contact_email_short
-    {
-        display: none;
-    }
-}
-
 @media screen and (max-width: 539px)
 {
     .intro_image_div
@@ -32,6 +8,16 @@
     .intro_contact_contacts_div 
     {
         justify-content: end;
+    }
+
+    .intro_contact_email
+    {
+        display: none;
+    }
+    
+    .intro_contact_email_short
+    {
+        display: inline;
     }
 }
 
@@ -45,6 +31,16 @@
     .intro_contact_contacts_div
     {
         justify-content: center;
+    }
+
+    .intro_contact_email
+    {
+        display: inline;
+    }
+    
+    .intro_contact_email_short
+    {
+        display: none;
     }
 }
 

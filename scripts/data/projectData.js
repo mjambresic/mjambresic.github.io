@@ -565,7 +565,7 @@ export class ProjectData
                 ToolData.Git
             ],
             [
-                {url: 'https://github.com/matyX6/path-gen', text: 'Source Code'}
+                {url: 'https://github.com/mjambresic/path-gen', text: 'Source Code'}
             ]
         ),
     ];
@@ -599,7 +599,7 @@ export class ProjectData
                 ToolData.Git
             ],
             [
-                {url: 'https://github.com/matyX6/homebound', text: 'Source Code'}
+                {url: 'https://github.com/mjambresic/homebound', text: 'Source Code'}
             ]
         ),
         
@@ -630,7 +630,7 @@ export class ProjectData
                 ToolData.Git
             ],
             [
-                {url: 'https://github.com/matyX6/matyX6.github.io', text: 'Source Code'}
+                {url: 'https://github.com/mjambresic/mjambresic.github.io', text: 'Source Code'}
             ]
         )
     ];
