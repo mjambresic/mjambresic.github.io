@@ -15,7 +15,7 @@ export class DescriptionData
         [
             'With over 7 years of professional experience, I have contributed to a diverse range of commercial and open-source software projects.',
             'Holding a Professional Bachelor’s degree in Computer Science with a specialization in Software Engineering, I possess a comprehensive understanding of software development and engineering principles.',
-            'Most of my specialization has been in Unity and C#, though I am also familiar with Unreal Engine.'
+            'Most of my specialization has been in Unity and C#, though I am also familiar with Unreal Engine and C++.'
         ]
     )
 
