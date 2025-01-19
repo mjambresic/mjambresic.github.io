@@ -95,7 +95,7 @@ export class ProjectData
             ],
             new ProjectNote
             (
-                'I hold full ownership of this project and all associated rights. The technical part of the project is in the finishing stages, while art and sound will undergo one more iteration. The game build is available on request if you want to evaluate gameplay and stability. If you are interested in being part of this project, feel free to contact me through the contacts section at the bottom of this website, so we can arrange a meeting.',
+                'I hold full ownership of this project and all associated rights. If you are interested in being part of it, feel free to contact me through the contacts section at the bottom of this website so we can arrange a meeting. The game build is available upon request if you want to evaluate gameplay and stability.',
                 '#810077',
                 '#ffe3fd'
             ),
@@ -476,12 +476,7 @@ export class ProjectData
             [
                 new ProjectImage('./assets/tims.webp', './assets/tim.webp', 13040),
             ],
-            new ProjectNote
-            (
-                'Most of these projects are unfinished and represent ideas or learning pieces rather than a complete work. Many of other prototypes have been developed over the years and will be added here sometime in the future.',
-                '#760c00',
-                '#ffdcd8'
-            ),
+            null,
             [
                 'Created purely for fun, learning and experimentation, showcasing various game worlds or gameplay mechanics I developed.'
             ],

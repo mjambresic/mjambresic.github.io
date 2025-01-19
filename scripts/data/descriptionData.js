@@ -13,9 +13,9 @@ export class DescriptionData
     (
         'Background',
         [
-            'With over 7 years of professional experience, I have contributed to a diverse range of commercial and open-source software projects.',
-            'Holding a Professional Bachelor’s degree in Computer Science with a specialization in Software Engineering, I possess a comprehensive understanding of software development and engineering principles.',
-            'Most of my specialization has been in Unity and C#, though I am also familiar with Unreal Engine and C++.'
+            'Game developer with expert skills in C# programming. Specialized in making Unity games with more than 7 years of game making and programming experience.',
+            'I hold a Professional Bachelor’s degree in Computer Science, Software Engineering.',
+            'Most of my specialization has been in Unity and C#, though I am also proficient with Unreal Engine and C++.'
         ]
     )
 
