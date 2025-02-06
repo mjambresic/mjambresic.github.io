@@ -22,7 +22,9 @@ export class Content
         this.RenderContentDescription(DescriptionData.Background);
         this.RenderContentDescription(DescriptionData.GameProjects);
         this.RenderProjects(ProjectData.Games);
-        this.RenderContentDescription(DescriptionData.GameTools);
+        this.RenderContentDescription(DescriptionData.MobileGames);
+        this.RenderProjects(ProjectData.MobileGames);
+        this.RenderContentDescription(DescriptionData.Prototypes);
         this.RenderProjects(ProjectData.Tools);
         this.RenderContentDescription(DescriptionData.OtherProjects);
         this.RenderProjects(ProjectData.Other);

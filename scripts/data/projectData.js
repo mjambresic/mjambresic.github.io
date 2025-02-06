@@ -437,57 +437,120 @@ export class ProjectData
                 ToolData.Perforce
             ],
             []
-        ),
+        )
+    ];
 
+    static MobileGames =
+    [
         new Project
         (
-            'Mobile Games',
+            'Splash\'em',
             [
                 new ProjectImage('./assets/spls.webp', './assets/spl.webp', 7280, '52%'),
-                new ProjectImage('./assets/scls.webp', './assets/scl.webp', 10800, '60%'),
-                new ProjectImage('./assets/buns.webp', './assets/bun.webp', 6640, '64%'),
-                new ProjectImage('./assets/wbls.webp', './assets/wbl.webp', 5680)
             ],
             null,
             [
-                'A collection of some mobile games I\'ve designed and developed over the years.',
+                'Colorful game with unlimited levels, difficulty progression and simple ball spinning mechanic.',
             ],
-            'Featured projects:',
+            'Features:',
             [
-                'Splash\'em',
-                '* Colorful game with unlimited levels, difficulty progression and simple ball spinning mechanic.',
-                '# Snake Colors',
-                '* A game inspired by the classic Snake, and modern color matching mechanic.',
-                '# Bunners',
-                '* An endless runner game in which you play as a little bunny, dodging obstacles to survive.',
-                '# White Blocks',
-                '* Destroy as many white blocks as you can. Tap tap tap!',
+                'Unlimited Levels.',
+                'Haptic Feedback.',
+                'Responsive design on all vertical devices.',
+                'Simple game settings and toggles.'
             ],
-            '1 years, 6 months',
+            '3 months',
             [
-                ToolData.MixedTools
+                ToolData.Unity,
+                ToolData.CSharp,
+                ToolData.Git,
+                ToolData.Photoshop
             ],
             []
         ),
 
         new Project
         (
-            'Prototypes',
+            'Bunners',
             [
-                new ProjectImage('./assets/tims.webp', './assets/tim.webp', 13040),
+                new ProjectImage('./assets/buns.webp', './assets/bun.webp', 6640, '64%'),
             ],
             null,
             [
-                'Created purely for fun, learning and experimentation, showcasing various game worlds or gameplay mechanics I developed.'
+                'An endless runner game in which you play as a little bunny, dodging obstacles to survive.',
             ],
-            'Featured projects:',
+            'Features:',
             [
-                'Timecode',
-                '* Set in a dystopian cyberpunk future, this action puzzle game tasks players with overcoming environmental challenges, hack systems, and solve intricate puzzles.',
+                'Endless runs.',
+                'Platforming mechanics.',
+                'Difficulty progression.',
+                'In-game currency and shop.',
+                'Cosmetic player items and collection.',
+                'Themes and game personalization.'
             ],
-            '2 months',
+            '5 months',
             [
-                ToolData.MixedTools
+                ToolData.GameMaker,
+                ToolData.GameMakerLanguage,
+                ToolData.Git,
+                ToolData.Photoshop
+            ],
+            []
+        ),
+
+        new Project
+        (
+            'White Blocks',
+            [
+                new ProjectImage('./assets/wbls.webp', './assets/wbl.webp', 5680)
+            ],
+            null,
+            [
+                'Destroy as many white blocks as you can. Tap tap tap!',
+            ],
+            'Features:',
+            [
+                'Endless block breaking.',
+                'High scores and leaderboards.',
+                'Combo scoring mechanics.',
+                'Difficulty progression.',
+                'Fair lootbox collecting.',
+                'Cosmetic player items and collection.',
+                'Themes and game personalization.'
+            ],
+            '6 months',
+            [
+                ToolData.Unity,
+                ToolData.CSharp,
+                ToolData.Git,
+                ToolData.Photoshop
+            ],
+            []
+        ),
+
+        new Project
+        (
+            'Snake Colors',
+            [
+                new ProjectImage('./assets/scls.webp', './assets/scl.webp', 10800, '60%'),
+            ],
+            null,
+            [
+                'A game inspired by the classic Snake, and modern color matching mechanic.',
+            ],
+            'Features:',
+            [
+                'Endless gameplay.',
+                'Color matching mechanics.',
+                'Camera shake and game feel enhancements.',
+                'High scores.'
+            ],
+            '3 months',
+            [
+                ToolData.Unity,
+                ToolData.CSharp,
+                ToolData.Git,
+                ToolData.Photoshop
             ],
             []
         )
@@ -495,6 +558,67 @@ export class ProjectData
 
     static Tools =
     [
+        new Project
+        (
+            'The Talos Records',
+            [
+                new ProjectImage('./assets/trecs.webp', './assets/trec.webp', 6320),
+                new ProjectImage('./assets/trec_1.webp', ''),
+                new ProjectImage('./assets/trec_2.webp', ''),
+                new ProjectImage('./assets/trec_4.webp', ''),
+                new ProjectImage('./assets/trec_3.webp', ''),
+            ],
+            null,
+            [
+                'A prototype inspired by The Talos Principle, focusing on interaction system and recording mechanics.',
+            ],
+            'Features:',
+            [
+                'First-person player character.',
+                'Interaction system.',
+                'Item handling. Pickup, place and drop.',
+                'Recording gameplay mechanic and snapshot system.',
+                'Puzzle and objectives.',
+                'Computer terminal behaviour.'
+            ],
+            '2 weeks',
+            [
+                ToolData.Unreal,
+                ToolData.CPlusPlus,
+                ToolData.Git,
+            ],
+            [
+                {url: 'https://github.com/mjambresic/talos-records', text: 'Source Code'}
+            ]
+        ),
+
+        new Project
+        (
+            'Timecode',
+            [
+                new ProjectImage('./assets/tims.webp', './assets/tim.webp', 10800, '60%'),
+            ],
+            null,
+            [
+                'An action-puzzle game set in a dystopian cyberpunk future.', 
+            ],
+            'Features:',
+            [
+                'Simple gameplay designed for mobile and gaming platforms.',
+                'Narrative centered about hackers.',
+                'Hacking mechanics and puzzles.',
+                'Environmental challenges.'
+            ],
+            '2 months',
+            [
+                ToolData.Unity,
+                ToolData.CSharp,
+                ToolData.Git,
+                ToolData.MagicaVoxel
+            ],
+            []
+        ),
+        
         new Project
         (
             'FPS Multiplayer Backend',
@@ -531,38 +655,7 @@ export class ProjectData
                 ToolData.Git
             ],
             []
-        ),
-
-        new Project
-        (
-            'Path Generation',
-            [
-                new ProjectImage('./assets/ppgs.webp', './assets/ppg.webp', 6540),
-            ],
-            null,
-            [
-                'Reusable, grid-based procedural path generation algorithm, designed to create dynamic and efficient pathways.',
-            ],
-            'Features:',
-            [
-                'Resizeable environment.',
-                '* Vertical.',
-                '* Horizontal.',
-                'Multiple tile sizes.',
-                '* 1-1',
-                '* 1-2',
-                '* 2-1',
-                '* 4-4',
-            ],
-            '1 day',
-            [
-                ToolData.CSharp,
-                ToolData.Git
-            ],
-            [
-                {url: 'https://github.com/mjambresic/path-gen', text: 'Source Code'}
-            ]
-        ),
+        )
     ];
 
     static Other =
@@ -595,6 +688,37 @@ export class ProjectData
             ],
             [
                 {url: 'https://github.com/mjambresic/homebound', text: 'Source Code'}
+            ]
+        ),
+
+        new Project
+        (
+            'Path Generation',
+            [
+                new ProjectImage('./assets/ppgs.webp', './assets/ppg.webp', 6540),
+            ],
+            null,
+            [
+                'Reusable, grid-based procedural path generation algorithm, designed to create dynamic and efficient pathways.',
+            ],
+            'Features:',
+            [
+                'Resizeable environment.',
+                '* Vertical.',
+                '* Horizontal.',
+                'Multiple tile sizes.',
+                '* 1-1',
+                '* 1-2',
+                '* 2-1',
+                '* 4-4',
+            ],
+            '1 day',
+            [
+                ToolData.CSharp,
+                ToolData.Git
+            ],
+            [
+                {url: 'https://github.com/mjambresic/path-gen', text: 'Source Code'}
             ]
         ),
         
@@ -633,6 +757,7 @@ export class ProjectData
     static ArrayIds = 
     {
         games: this.Games,
+        mobileGames: this.MobileGames,
         tools: this.Tools,
         other: this.Other
     };

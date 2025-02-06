@@ -27,11 +27,19 @@ export class DescriptionData
         ]
     )
 
-    static GameTools = new Description
+    static MobileGames = new Description
     (
-        'Game Tools',
+        'Mobile Games',
         [
-            'Below are some of the tools and reusable resources I\'ve made for video games.'
+            'A collection of some mobile games I\'ve designed and developed over the years.'
+        ]
+    )
+
+    static Prototypes = new Description
+    (
+        'Prototypes',
+        [
+            'Created purely for fun, learning and experimentation, showcasing various game worlds or gameplay mechanics I developed.'
         ]
     )
     

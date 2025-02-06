@@ -22,7 +22,10 @@ export class ToolData
     static Mlapi = new Tool('MLAPI', '#B23E38');
     static Netcode = new Tool('Netcode', '#B23E38');
     static Bash = new Tool('Bash', '#76A74D');
-    static MixedTools = new Tool('Mixed Tools', '#000000');
+    static Photoshop = new Tool('Photoshop', '#004882');
+    static GameMaker = new Tool('GameMaker', '#81cc35');
+    static GameMakerLanguage = new Tool('GML', '#76A74D');
+    static MagicaVoxel = new Tool('MagicaVoxel', '#D778F4');
 }
 
 
