@@ -13,7 +13,7 @@ export class DescriptionData
     (
         'Background',
         [
-            'Game developer with expert skills in C# programming. Specialized in making Unity games with more than 7 years of game making and programming experience.',
+            'Game developer with expert skills in C# programming. Specialized in making Unity games with more than 7 years of game making and gameplay programming experience.',
             'I hold a Professional Bachelor’s degree in Computer Science, Software Engineering.',
             'Most of my specialization has been in Unity and C#, though I am also proficient with Unreal Engine and C++.'
         ]
